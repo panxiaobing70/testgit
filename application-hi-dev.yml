@@ -1,34 +1,13 @@
 server:
-  port: 8024
-
+  port: 8013
 spring:
   application:
-    name: config-client
+    name: service-hello
   boot:
     admin:
       client:
         url: http://localhost:8022
-spring:
-  cloud:
-    config:
-      label: master
-      profile: dev
-      discovery:
-         enabled: true
-         serviceId: config-server
-spring:    
-    bus:
-      enabled: true
-      trace:
-        enabled: true
 
-spring:
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-    
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10 #表示eureka client发送心跳给server端的频率，默认为30秒
